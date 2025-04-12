@@ -6,6 +6,9 @@ packages_common=(
 	"git"
 )
 
+packages_specific=(
+)
+
 install_packet() {
 	echo "installing packet $1 using ${PKGMANAGER_NAME}"
 	if [[ "${PKGMANAGER_NAME}" == "apt" ]]; then
@@ -23,6 +26,13 @@ install_packet() {
 install_packages() {
 	echo "${TERM_PREFIX}Installing common packages"
 	for pkt in "${packages_common[@]}"
+	do
+		echo "${TERM_PREFIX}installing packet ${pkt}"
+		install_packet "${pkt}"
+	done
+
+ 	echo "${TERM_PREFIX}Installing distro specific packages"
+	for pkt in "${packages_specific[@]}"
 	do
 		echo "${TERM_PREFIX}installing packet ${pkt}"
 		install_packet "${pkt}"

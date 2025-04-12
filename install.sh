@@ -10,6 +10,12 @@ install_packet() {
 	echo "installing packet $1 using ${PKGMANAGER_NAME}"
 	if [[ "${PKGMANAGER_NAME}" == "apt" ]]; then
 		sudo apt install "$1"
+ 	fi
+  	if [[ "${PKGMANAGER_NAME}" == "pacman" ]]; then
+		sudo pacman -Sy "$1"
+	fi
+ 	if [[ "${PKGMANAGER_NAME}" == "dnf" ]]; then
+		sudo dnf install "$1"
 	fi
 
 }

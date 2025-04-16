@@ -9,6 +9,11 @@ packages_common=(
 packages_specific=(
 )
 
+packages_debian=(
+	"python3-pip"
+ 	"python3.11-venv"
+)
+
 install_packet() {
 	echo "installing packet $1 using ${PKGMANAGER_NAME}"
 	if [[ "${PKGMANAGER_NAME}" == "apt" ]]; then

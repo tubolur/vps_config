@@ -25,6 +25,10 @@ install_packet() {
     sudo ${install} ${1}
 }
 
+install_bin() {
+    logger("installing binary package from binary $1")
+}
+
 install_system() {
 
     logger "Installing system $system"

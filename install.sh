@@ -1,5 +1,5 @@
 system="$1"
-installed_sections=("base" "python" "cockpit" "podman" "docker")
+installed_sections=("base" "python" "podman")
 
 logger() {
     bold=$(tput bold)

@@ -11,8 +11,9 @@ logger() {
 load_system_source()  {
     if [ -e "$system" ]; then
         logger "Sourcing packets definitions for ${system}... "
+        source $system
     else 
-        logger "File does not exist"
+        logger "System definition does not exist : ${system}"
         exit
     fi 
 }
@@ -25,7 +26,7 @@ install_packet() {
 install_system() {
 
     
-    source $system
+    
 
     logger "Installing system $system"
 

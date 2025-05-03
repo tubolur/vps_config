@@ -9,11 +9,13 @@ logger() {
 }
 
 load_system_source()  {
-    if [ -e "$system" ]; then
+    file="data/$system"
+
+    if [ -e "$file" ]; then
         logger "Sourcing packets definitions for ${system}... "
-        source $system
+        source $file
     else 
-        logger "System definition does not exist : ${system}"
+        logger "System definition does not exist : ${file}"
         exit
     fi 
 }

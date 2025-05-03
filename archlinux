@@ -1,7 +1,9 @@
 update="pacman -Syu --noconfirm"
 install="pacman -Sy --noconfirm"
 
-base=("wget" "freetype2" "gcc" "git" "make" "python" "python-virtualenv" "sudo" "nano" "sqlite")
+base=("wget" "freetype2" "gcc" "git" "make" "sudo" "nano" "sqlite")
+
+python=( "python" "python-virtualenv" )
 
 cockpit=("cockpit" "cockpit-podman")
 podman=("podman")

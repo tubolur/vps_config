@@ -26,7 +26,7 @@ install_packet() {
 }
 
 install_bin() {
-    logger("installing binary package from binary $1")
+    logger "installing binary package from binary $1"
 }
 
 install_system() {

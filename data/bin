@@ -1,0 +1,3 @@
+podmantui=("https://github.com/containers/podman-tui/releases/download/v1.5.0/podman-tui-release-linux_amd64.zip")
+lazydocker=("https://github.com/jesseduffield/lazydocker/releases/download/v0.24.1/lazydocker_0.24.1_Linux_x86_64.tar.gz")
+

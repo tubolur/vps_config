@@ -32,6 +32,7 @@ install_system() {
     sudo $update
 
     logger "Installing sections : $sections"
+    
     for section in "${installed_sections[@]}"
     do
         logger "installing section $section"

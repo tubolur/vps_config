@@ -1,4 +1,4 @@
-system="archlinux"
+system="$1"
 installed_sections=("base" "cockpit" "podman" "docker")
 
 logger() {
@@ -8,6 +8,15 @@ logger() {
     echo "### ${bold}$1${normal}"
 }
 
+load_system_source()  {
+    if [ -e "$system" ]; then
+        logger "Sourcing packets definitions for ${system}... "
+    else 
+        logger "File does not exist"
+        exit
+    fi 
+}
+
 install_packet() {
     logger " ... ${logprefix} installing $1"
     sudo ${install} ${1}
@@ -15,7 +24,7 @@ install_packet() {
 
 install_system() {
 
-    logger "Sourcing packets definitions ... "
+    
     source $system
 
     logger "Installing system $system"

@@ -1,0 +1,8 @@
+update="apt update -y && apt upgrade -y"
+install="apt install -y"
+
+base=("wget" "freetype2" "gcc" "git" "make" "python" "python-virtualenv" "sudo" "nano" "sqlite")
+
+cockpit=("cockpit" "cockpit-podman")
+podman=("podman")
+docker=("docker.io")

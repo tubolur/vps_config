@@ -21,7 +21,7 @@ load_system_source()  {
 }
 
 install_packet() {
-    logger " ... ${logprefix} installing $1"
+    logger " ... installing $1 ${logsuffix}"
     sudo ${install} ${1}
 }
 
@@ -33,7 +33,7 @@ install_system() {
     logger "Updating system"
     sudo $update
 
-    logger "Installing sections : $installed_sections"
+    logger "Installing sections : ${installed_sections[@]}"
     
     for section in "${installed_sections[@]}"
     do
@@ -45,10 +45,12 @@ install_system() {
         ITER=1
         for s in "${pkts[@]}"
         do
-            logprefix="$ITER  / ${#pkts[@]}"
+            logsuffix=" ( $ITER  / ${#pkts[@]} )"
             install_packet $s
             ITER=$(expr $ITER + 1)
         done
+
+        logsuffix=""
 
     done
 

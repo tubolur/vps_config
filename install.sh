@@ -25,14 +25,13 @@ install_packet() {
 
 install_system() {
 
-    
-    
-
     logger "Installing system $system"
-
+    load_system_source
+    
     logger "Updating system"
     sudo $update
 
+    logger "Installing sections : $sections"
     for section in "${installed_sections[@]}"
     do
         logger "installing section $section"

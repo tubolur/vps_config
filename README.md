@@ -8,7 +8,8 @@ A predefined list of aliases to be added to the `~/.bashrc` or `~/.bash_aliases`
 
 ## install.sh
 
-This script provides quick way to install packages, distribution-independant, using simple configuration files in `data` folder
+This script provides quick way to install packages, distribution-independant, using simple configuration files in `data` folder.
+
 Call it with
 `./install.sh nameofthedistribution` 
 
@@ -16,6 +17,7 @@ You can select which categories to be installed, editing the line at the beginni
 `installed_sections=("base" "python" "podman")`
 
 The available sections are listed below, they are defined in text files into `data` subfolder.
+
 There is also a way to define binary packages to be directy downloaded from any website.The entries are in the `data/bin` folder.
 
 ### currently supported distributions:

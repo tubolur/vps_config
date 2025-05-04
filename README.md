@@ -1,6 +1,10 @@
 # CONFIG TOOLS
 
-This repo includes a few ressources for servers
+This repo includes a few ressources for quick linux distros init.
+
+## .bash-aliases
+
+A predefined list of aliases to be added to the `~/.bashrc` or `~/.bash_aliases` file.
 
 ## install.sh
 
@@ -10,7 +14,9 @@ Call it with
 
 You can select which categories to be installed, editing the line at the beginning of the file **install.sh** :
 `installed_sections=("base" "python" "podman")`
-The available sections are listed below.
+
+The available sections are listed below, they are defined in text files into `data` subfolder.
+There is also a way to define binary packages to be directy downloaded from any website.The entries are in the `data/bin` folder.
 
 ### currently supported distributions:
  - [x] archlinux
@@ -22,5 +28,4 @@ The available sections are listed below.
  - [x] podman
  - [x] python
 
-## .bash-aliases
-A predefined list of aliases to be added to the `~/.bashrc` or `~/.bash_aliases` file.
+

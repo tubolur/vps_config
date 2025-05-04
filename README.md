@@ -18,7 +18,7 @@ You can select which categories to be installed, editing the line at the beginni
 
 The available sections are listed below, they are defined in text files into `data` subfolder.
 
-There is also a way to define binary packages to be directy downloaded from any website.The entries are in the `data/bin` folder.
+There is also a way to define binary packages to be directy downloaded from any website.The entries are listed in the `data/bin` file.
 
 ### currently supported distributions:
  - [x] archlinux

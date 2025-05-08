@@ -1,7 +1,7 @@
 update="pacman -Syu --noconfirm"
 install="pacman -Sy --noconfirm"
 
-base=("wget" "freetype2" "gcc" "git" "make" "sudo" "nano" "sqlite")
+base=("wget" "freetype2" "gcc" "git" "make" "sudo" "nano" "sqlite" "net-tools")
 
 python=( "python" "python-virtualenv" )
 
